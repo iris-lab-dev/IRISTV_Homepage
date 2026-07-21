@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="세상을 보는 새로운 시선, 아이리스TV" />
+    <meta property="og:title" content="아이리스TV | 세상을 보는 새로운 시선" />
+    <meta property="og:description" content="아이리스TV의 주요 뉴스와 영상을 확인하세요." />
+    <meta property="og:type" content="website" />
+    <title>아이리스TV | 세상을 보는 새로운 시선</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
+    <div class="topline">
+      <div class="shell topline__inner">
+        <p id="today"></p>
+        <p>세상을 보는 새로운 시선</p>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="shell header__inner">
+        <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+        <a class="brand" href="#top" aria-label="아이리스TV 홈">
+          <span class="brand__mark">I</span>
+          <span>IRIS<span>TV</span></span>
+        </a>
+        <div class="header-actions">
+          <button class="icon-button" type="button" aria-label="검색 열기" data-search-toggle>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.25 4.25"></path></svg>
+          </button>
+          <a class="tip-link" href="#tip">제보하기</a>
+        </div>
+      </div>
+      <nav class="main-nav" id="main-nav" aria-label="주요 메뉴">
+        <div class="shell">
+          <a class="active" href="#top">홈</a>
+          <a href="#politics">정치</a>
+          <a href="#economy">경제</a>
+          <a href="#society">사회</a>
+          <a href="#culture">문화</a>
+          <a href="#tech">IT·과학</a>
+          <a href="#video">영상</a>
+          <a href="#opinion">오피니언</a>
+        </div>
+      </nav>
+      <form class="search-panel shell" role="search" data-search-form>
+        <label for="site-search">기사 검색</label>
+        <input id="site-search" type="search" placeholder="검색어를 입력하세요" autocomplete="off" />
+        <button type="submit">검색</button>
+      </form>
+    </header>
+
+    <main id="main-content">
+      <section class="shell breaking" aria-label="속보">
+        <span class="breaking__label">BREAKING</span>
+        <p>아이리스TV가 전하는 오늘의 주요 소식입니다.</p>
+        <time id="breaking-time"></time>
+      </section>
+
+      <section class="shell lead-grid" id="top" aria-label="주요 뉴스">
+        <article class="lead-story featured-art">
+          <div class="article-visual article-visual--lead"><span>IRIS<br />FOCUS</span></div>
+          <div class="lead-story__copy">
+            <p class="eyebrow">사회 <time>2026.07.21</time></p>
+            <h1>도시의 내일을 바꾸는 작은 변화, 시민의 목소리에서 시작되다</h1>
+            <p>일상 가까이에서 발견한 변화의 순간들을 아이리스TV가 새로운 시선으로 기록합니다.</p>
+            <a class="text-link" href="#latest">기사 읽기 <span>→</span></a>
+          </div>
+        </article>
+        <aside class="headline-list" aria-label="주요 헤드라인">
+          <div class="section-heading"><p class="eyebrow">TOP STORIES</p><span>01 — 03</span></div>
+          <ol id="top-stories"></ol>
+        </aside>
+      </section>
+
+      <section class="shell news-section" id="latest">
+        <div class="section-heading section-heading--large">
+          <div><p class="eyebrow">LATEST NEWS</p><h2>최신 뉴스</h2></div>
+          <a class="text-link" href="#all-news">전체보기 <span>→</span></a>
+        </div>
+        <div class="news-grid" id="latest-news"></div>
+      </section>
+
+      <section class="wide-banner" id="tip">
+        <div class="shell wide-banner__inner">
+          <p class="eyebrow">YOUR STORY MATTERS</p>
+          <h2>당신의 이야기가<br />뉴스가 됩니다.</h2>
+          <a href="mailto:tip@iristv.co.kr">제보하기 <span>→</span></a>
+        </div>
+      </section>
+
+      <section class="shell news-section split-section" id="economy">
+        <div class="section-heading section-heading--large">
+          <div><p class="eyebrow">ECONOMY · TECHNOLOGY</p><h2>경제 · IT</h2></div>
+          <a class="text-link" href="#all-news">전체보기 <span>→</span></a>
+        </div>
+        <div class="split-content">
+          <article class="feature-card">
+            <div class="article-visual article-visual--tech"><span>NEXT<br />WAVE</span></div>
+            <p class="eyebrow">IT·과학 <time>10:40</time></p>
+            <h3>기술은 어떻게 우리의 평범한 하루를 바꾸고 있을까</h3>
+            <p>다가오는 변화 속에서 우리가 준비해야 할 것들을 짚어봅니다.</p>
+          </article>
+          <div class="compact-list" id="economy-news"></div>
+        </div>
+      </section>
+
+      <section class="shell news-section" id="video">
+        <div class="section-heading section-heading--large">
+          <div><p class="eyebrow">IRIS PLAY</p><h2>아이리스 영상</h2></div>
+          <a class="text-link" href="#all-video">영상 전체보기 <span>→</span></a>
+        </div>
+        <div class="video-grid" id="video-news"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="opinion">
+      <div class="shell footer__top">
+        <a class="brand brand--footer" href="#top"><span class="brand__mark">I</span><span>IRIS<span>TV</span></span></a>
+        <div class="footer-links">
+          <a href="#about">회사소개</a><a href="#terms">이용약관</a><a href="#privacy">개인정보처리방침</a><a href="mailto:tip@iristv.co.kr">제보하기</a>
+        </div>
+      </div>
+      <div class="shell footer__bottom">
+        <p>아이리스TV · 발행인 및 편집인: 아이리스TV · 서울특별시</p>
+        <p>© <span id="year"></span> IRIS TV. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
