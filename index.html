@@ -18,7 +18,7 @@
     <div class="topline">
       <div class="shell topline__inner">
         <p id="today"></p>
-        <p>인터넷신문 등록 준비 중</p>
+        <p></p>
       </div>
     </div>
 
@@ -38,18 +38,7 @@
           <a class="tip-link" href="mailto:jebo@irislab.co.kr">제보하기</a>
         </div>
       </div>
-      <nav class="main-nav" id="main-nav" aria-label="주요 메뉴">
-        <div class="shell">
-          <a class="active" href="#top">홈</a>
-          <a href="#politics">정치</a>
-          <a href="#economy">경제</a>
-          <a href="#society">사회</a>
-          <a href="#culture">문화</a>
-          <a href="#tech">IT·과학</a>
-          <a href="#video">영상</a>
-          <a href="#opinion">오피니언</a>
-        </div>
-      </nav>
+   
       <form class="search-panel shell" role="search" data-search-form>
         <label for="site-search">기사 검색</label>
         <input id="site-search" type="search" placeholder="검색어를 입력하세요" autocomplete="off" />
@@ -57,71 +46,66 @@
       </form>
     </header>
 
-    <main id="main-content">
-      <aside class="shell preparation-notice" aria-label="등록 준비 안내">
-        <strong>인터넷신문 등록 준비 중</strong>
-        <p>현재 사이트에 게시된 기사·영상·이미지는 서비스 화면을 위한 예시 콘텐츠입니다.</p>
-      </aside>
-
-      <section class="shell breaking" aria-label="예시 알림">
-        <span class="breaking__label">SAMPLE</span>
-        <p>이 영역은 주요 알림을 표시하기 위한 예시입니다.</p>
-      </section>
-
-      <section class="shell lead-grid" id="top" aria-label="주요 뉴스">
-        <article class="lead-story featured-art">
-          <div class="article-visual article-visual--lead"><span>IRIS<br />FOCUS</span></div>
-          <div class="lead-story__copy">
-            <p class="eyebrow">예시 카테고리 <time>YYYY.MM.DD</time></p>
-            <h1>예시 기사 제목입니다</h1>
-            <p>이 문구는 인터넷신문 서비스 화면의 기사 영역을 보여 주기 위한 예시입니다.</p>
-            <a class="text-link" href="#latest">예시 보기 <span>→</span></a>
+    <main id="main-content" class="board-main">
+      <section class="shell news-board" id="top" aria-labelledby="board-title">
+        <section class="board-section" aria-labelledby="notice-title">
+          <div class="board-section__heading">
+            <div>
+              <p class="eyebrow">NOTICE</p>
+              <h2 id="notice-title">중요 게시물</h2>
+            </div>
+            <span>필독</span>
           </div>
-        </article>
-        <aside class="headline-list" aria-label="주요 헤드라인">
-          <div class="section-heading"><p class="eyebrow">TOP STORIES</p><span>01 — 03</span></div>
-          <ol id="top-stories"></ol>
-        </aside>
-      </section>
+          <ul class="board-list board-list--notice">
+            <li>
+              <details>
+                <summary>[공지] 취재 및 제보 관련 공식 연락 창구 안내</summary>
+                <article>
+                  <p class="board-meta">공지 · 아이리스TV <time datetime="2026-07-28">2026.07.28</time></p>
+                  <p>안녕하십니까, 아이리스TV입니다.</p>
+                  <p>현재 당사의 업무 일정 및 운영 방침상, 모든 인터뷰 요청, 취재 문의, 각종 제보는 아래의 공식 이메일을 통해서만 접수받고 있습니다.</p>
+                  <p>취재진 및 관계자 여러분께서는 원활한 업무 처리를 위해 다음 공지 사항을 반드시 확인해 주시기 바랍니다.</p>
+                  <h3>공식 접수 창구 및 회신 안내</h3>
+                  <p>이메일: <a href="mailto:jebo@iristv.kr">jebo@iristv.kr</a></p>
+                  <p>모든 질의서 및 제보 내용은 상기 이메일로만 접수받습니다.</p>
+                  <p>접수된 내용 중 당사가 필요하다고 판단하는 경우에 한해 개별 회신을 드리며, 모든 접수 건에 대해 별도의 답변이나 확인을 드리지 않는 점 양해 바랍니다. (답변 요구 및 독촉 회신 불가)</p>
+                  <h3>기타 소통 수단 일절 불가</h3>
+                  <p>이메일 외의 모든 수단(대면 인터뷰, 전화, 메시지 등)을 통한 취재 요청 및 질의는 일절 수신하거나 응대하지 않습니다.</p>
+                  <h3>무단 방문 및 개별 접촉 시 법적 조치 안내</h3>
+                  <p>법인 등기부 및 홈페이지 등에 명시된 사업장 주소지 무단 방문, 또는 임직원의 성명·개인 연락처를 통한 개별 접촉 시도는 엄격히 금지됩니다.</p>
+                  <p>사전 협의 없는 주소지 방문이나 개인적 접촉 시도가 발생할 경우, 업무 방해 및 사생활 침해 등으로 간주하여 예고 없이 즉각적인 법적 조치를 취할 것임을 명확히 밝힙니다.</p>
+                  <p>감사합니다.</p>
+                </article>
+              </details>
+            </li>
+          </ul>
+        </section>
 
-      <section class="shell news-section" id="latest">
-        <div class="section-heading section-heading--large">
-          <div><p class="eyebrow">SAMPLE CONTENT</p><h2>예시 기사</h2></div>
-          <a class="text-link" href="#all-news">예시 전체보기 <span>→</span></a>
-        </div>
-        <div class="news-grid" id="latest-news"></div>
-      </section>
+        <section class="board-section" aria-labelledby="article-title">
+          <div class="board-section__heading">
+            <div>
+              <p class="eyebrow">LATEST ARTICLES</p>
+              <h2 id="article-title">일반 게시물</h2>
+            </div>
 
-      <section class="wide-banner" id="tip">
-        <div class="shell wide-banner__inner">
-          <p class="eyebrow">CONTACT IRIS TV</p>
-          <h2>아이리스TV에<br />소식을 제보해 주세요.</h2>
-          <a href="mailto:jebo@irislab.co.kr">제보하기 <span>→</span></a>
-        </div>
-      </section>
-
-      <section class="shell news-section split-section" id="economy">
-        <div class="section-heading section-heading--large">
-          <div><p class="eyebrow">SAMPLE CATEGORY</p><h2>예시 카테고리</h2></div>
-          <a class="text-link" href="#all-news">예시 전체보기 <span>→</span></a>
-        </div>
-        <div class="split-content">
-          <article class="feature-card">
-            <div class="article-visual article-visual--tech"><span>NEXT<br />WAVE</span></div>
-            <p class="eyebrow">예시 카테고리 <time>00:00</time></p>
-            <h3>예시 기사 제목입니다</h3>
-            <p>이 문구는 기사 카드의 구성과 배치를 보여 주기 위한 예시입니다.</p>
-          </article>
-          <div class="compact-list" id="economy-news"></div>
-        </div>
-      </section>
-
-      <section class="shell news-section" id="video">
-        <div class="section-heading section-heading--large">
-          <div><p class="eyebrow">SAMPLE VIDEO</p><h2>예시 영상</h2></div>
-          <a class="text-link" href="#all-video">예시 전체보기 <span>→</span></a>
-        </div>
-        <div class="video-grid" id="video-news"></div>
+          </div>
+          <ul class="board-list">
+            <li>
+              <details>
+                <summary>고소장 접수</summary>
+                <article>
+                  <p class="board-meta">보도자료 / Iris / <time datetime="2026-07-28">2026.07.28</time></p>
+                  <p>[즉시 배포 가능]</p>
+                  <p>배포일자: 2026. 07. 28</p>
+                  <h3>[제목]</h3>
+                  <p>고소장 접수</p>
+                  <h3>[본문]</h3>
+                  <p>아이리스TV의 발행인 이종우는 2026년 7월 28일 13시 23분에 개인정보보호법 위반 등으로 인해 서울중앙지방검찰청에 고소장을 접수하였습니다.</p>
+                </article>
+              </details>
+            </li>
+          </ul>
+        </section>
       </section>
     </main>
 
@@ -134,10 +118,10 @@
       </div>
       <div class="shell footer__bottom">
         <div class="footer__details">
-          <p>제호: 아이리스TV (IRIS TV) · 인터넷신문 등록 준비 중</p>
+          <p>제호: 아이리스TV (IRIS TV) · 등록번호 경남,아02750</p>
           <p>발행인: 이종우 · 편집인: 이종우 · 청소년보호책임자: 이종우</p>
           <p>발행소: 경상남도 양산시 하북면 지곡1길 8, 1동 406호 · 전화: 070-8970-6780</p>
-          <p>대표 이메일: <a href="mailto:contact@irislab.co.kr">contact@irislab.co.kr</a> · 제보: <a href="mailto:jebo@irislab.co.kr">jebo@irislab.co.kr</a> · 사업자등록번호: 723-88-03656</p>
+          <p>대표 이메일: jebo@iristv.kr · 사업자등록번호: 723-88-03656</p>
         </div>
         <p>© <span id="year"></span> IRIS TV. All rights reserved.</p>
       </div>

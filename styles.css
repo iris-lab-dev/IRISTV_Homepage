@@ -364,6 +364,31 @@ h1 { font-size: clamp(31px, 3vw, 46px); }
 .footer__details { display: grid; gap: 5px; line-height: 1.65; }
 .footer__details a { color: rgba(255,255,255,.75); text-decoration: underline; text-underline-offset: 2px; }
 
+.board-main { padding: 52px 0 84px; }
+.news-board { max-width: 940px; }
+.board-header { padding: 0 0 38px; border-bottom: 3px solid var(--ink); }
+.board-header .eyebrow { margin-bottom: 10px; }
+.board-header h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.18; }
+.board-header > p:last-child { margin: 14px 0 0; color: var(--muted); font-size: 15px; }
+.board-section { margin-top: 44px; }
+.board-section__heading { display: flex; align-items: end; justify-content: space-between; padding-bottom: 14px; border-bottom: 1px solid var(--ink); }
+.board-section__heading .eyebrow { margin-bottom: 6px; }
+.board-section__heading h2 { font-size: 25px; }
+.board-section__heading > span { color: var(--muted); font: 500 12px "DM Mono", monospace; }
+.board-list { margin: 0; padding: 0; list-style: none; }
+.board-list li { border-bottom: 1px solid var(--line); }
+.board-list--notice li { background: #fff8f5; }
+.board-list details { width: 100%; }
+.board-list summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 21px 16px; cursor: pointer; font-size: 17px; font-weight: 700; line-height: 1.45; list-style: none; }
+.board-list summary::-webkit-details-marker { display: none; }
+.board-list summary::after { content: "+"; flex: 0 0 auto; color: var(--muted); font: 400 22px/1 "DM Mono", monospace; }
+.board-list details[open] summary { color: var(--accent); border-bottom: 1px solid var(--line); }
+.board-list details[open] summary::after { content: "−"; }
+.board-list article { padding: 20px 16px 23px; background: rgba(255, 255, 255, .66); }
+.board-meta { margin: 0 0 10px; color: var(--accent); font: 500 11px "DM Mono", monospace; letter-spacing: .04em; }
+.board-meta time { margin-left: 8px; color: var(--muted); }
+.board-list article > p:last-child { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
+
 .policy-page { min-height: 100vh; }
 .policy-main { padding: 78px 0; }
 .policy-document { max-width: 860px; margin: 0 auto; padding: clamp(28px, 5vw, 58px); border: 1px solid #e1e6ef; border-radius: 22px; background: #fff; box-shadow: 0 20px 46px rgba(20, 38, 80, .08); }
@@ -378,6 +403,12 @@ h1 { font-size: clamp(31px, 3vw, 46px); }
 
 @media (max-width: 800px) {
   .preparation-notice { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .board-main { padding: 36px 0 58px; }
+  .board-header { padding-bottom: 29px; }
+  .board-section { margin-top: 34px; }
+  .board-list summary { padding: 18px 8px; font-size: 16px; }
+  .board-list article { padding: 18px 8px 21px; }
+  .board-list article > p:last-child { font-size: 13px; }
   .policy-main { padding: 42px 0; }
 }
 
