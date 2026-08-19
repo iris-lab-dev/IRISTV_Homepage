@@ -528,6 +528,11 @@ body::after { top: 17%; right: 6%; width: clamp(72px, 10vw, 132px); }
 .board-list article p, .board-list article h3 { color: #716783; }
 .board-list article > p:last-child { color: #716783; }
 .board-list article a { color: #aa7fb2; text-decoration: underline; text-underline-offset: 3px; }
+.attachments { margin-top: 24px; padding-top: 18px; border-top: 1px solid rgba(144, 124, 175, .2); }
+.attachments h4 { margin: 0 0 10px; color: #8c70a3; font-size: 14px; }
+.attachments ul { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.attachments a { display: inline-flex; align-items: center; min-height: 34px; padding: 6px 12px; border: 1px solid rgba(180, 135, 200, .35); border-radius: 9px; background: rgba(255, 255, 255, .58); font-size: 13px; font-weight: 700; word-break: break-all; }
+.attachments a:hover { background: rgba(255, 255, 255, .9); }
 
 .site-footer {
   position: relative;
