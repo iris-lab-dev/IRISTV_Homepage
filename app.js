@@ -64,6 +64,69 @@ const setupAttachments = () => {
   });
 };
 
+const getPosts = (type) => {
+  const selector = type === "i" ? ".board-list--notice > li" : ".board-section[aria-labelledby='article-title'] .board-list > li";
+  return [...document.querySelectorAll(selector)].reverse();
+};
+
+const openPostFromHash = () => {
+  const match = window.location.hash.match(/^#([ia])\/(\d+)$/);
+  if (!match) return;
+
+  const post = getPosts(match[1])[Number(match[2]) - 1];
+  if (!post) return;
+
+  post.querySelector("details").open = true;
+  post.scrollIntoView({ block: "center" });
+};
+
+const setupPostLinks = () => {
+  ["i", "a"].forEach((type) => {
+    getPosts(type).forEach((post, index) => {
+      const url = new URL(window.location.href);
+      url.hash = `${type}/${index + 1}`;
+
+      const section = document.createElement("section");
+      section.className = "post-permalink";
+      section.setAttribute("aria-label", "게시물 주소");
+
+      const label = document.createElement("span");
+      label.textContent = "URL :";
+
+      const address = document.createElement("span");
+      address.className = "post-permalink__address";
+      address.textContent = url.href;
+
+      const copyLink = document.createElement("a");
+      copyLink.href = `#${type}/${index + 1}`;
+      copyLink.textContent = "복사";
+      copyLink.addEventListener("click", async (event) => {
+        event.preventDefault();
+        try {
+          await navigator.clipboard.writeText(url.href);
+        } catch {
+          const selection = window.getSelection();
+          const range = document.createRange();
+          range.selectNodeContents(address);
+          selection.removeAllRanges();
+          selection.addRange(range);
+          document.execCommand("copy");
+          selection.removeAllRanges();
+        }
+        copyLink.textContent = "복사됨";
+        window.setTimeout(() => { copyLink.textContent = "복사"; }, 1500);
+      });
+
+      section.append(label, address, copyLink);
+      post.querySelector("article").append(section);
+    });
+  });
+
+  openPostFromHash();
+  window.addEventListener("hashchange", openPostFromHash);
+};
+
 setDates();
 setupNavigation();
 setupAttachments();
+setupPostLinks();
